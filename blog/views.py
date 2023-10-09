@@ -3,10 +3,10 @@ from django.utils import timezone
 from .models import Post
 from .forms import PostForm, TextEntryForm, TextEntry
 import openai
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import os
 
-load_dotenv()
+#load_dotenv()
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
