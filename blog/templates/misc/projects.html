@@ -1,0 +1,22 @@
+{% extends 'misc/project_base.html' %}
+
+{% block content %}
+ 
+    
+        <h2>this is a test project</h2>
+        {% if user.is_authenticated %}
+           <br>
+           <form method="post">
+            {% csrf_token %}
+            {{ form }}
+              <button type="submit">Submit</button>
+            </form>
+           <br>
+           <br>
+           {% if text %}
+           <h2>Entered Text</h2>
+           {{ text }}
+           {% endif %}
+        {% endif %}
+      
+{% endblock %}
