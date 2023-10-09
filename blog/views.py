@@ -56,6 +56,7 @@ def text_entry_view(request):
     return render(request, 'misc/projects.html' ,{'form': form, 'text': text})
 
 def translate_with_ai(text):
+  openai.api_key = '1234'
   openai.api_key = os.getenv("OPENAI_KEY")
   
   
