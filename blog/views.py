@@ -61,7 +61,7 @@ def translate_with_ai(text):
     #openai.api_key = '1234'
     #return os.getenv("OPENAI_KEY")
     openai.api_key = os.getenv("OPENAI_KEY")
-    #print('this is the key: ', openai.api_key)
+    print('this is the key: ', openai.api_key)
   
 
     response = openai.Completion.create(
