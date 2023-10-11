@@ -57,13 +57,7 @@ def text_entry_view(request):
     return render(request, 'misc/projects.html' ,{'form': form, 'text': text})
 
 def translate_with_ai(text):
-    #return ''
-    #openai.api_key = '1234'
-    #return os.getenv("OPENAI_KEY")
-    #openai.api_key = os.getenv("OPENAI_KEY")
-    return ('this is the key: ', os.getenv("OPENAI_KEY"))
-  
-
+    openai.api_key = os.getenv("OPENAI_KEY")
     response = openai.Completion.create(
     model="text-davinci-003",
     prompt=
@@ -76,4 +70,4 @@ def translate_with_ai(text):
     presence_penalty=0)
     completion = response.choices[0].text
 
-    #return completion.strip()
+    return completion.strip()
