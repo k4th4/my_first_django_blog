@@ -4,7 +4,6 @@ from .models import Post
 from .forms import PostForm, TextEntryForm, TextEntry
 #import deepl
 import openai
-from dotenv import load_dotenv
 import os
 
 
