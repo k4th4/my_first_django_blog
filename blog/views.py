@@ -4,7 +4,7 @@ from .models import Post
 from .forms import PostForm, TextEntryForm, TextEntry
 #import deepl
 import openai
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 import os
 
 
@@ -59,10 +59,10 @@ def text_entry_view(request):
 
 def translate_with_ai(text):
     #return ''
-    openai.api_key = '1234'
-  #openai.api_key = os.getenv("OPENAI_KEY")
+    #openai.api_key = '1234'
+    openai.api_key = os.getenv("OPENAI_KEY")
   
-  
+
     response = openai.Completion.create(
     model="text-davinci-003",
     prompt=
