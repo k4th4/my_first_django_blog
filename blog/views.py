@@ -60,8 +60,8 @@ def text_entry_view(request):
 def translate_with_ai(text):
     #return ''
     #openai.api_key = '1234'
-    return os.getenv("OPENAI_KEY")
-    #openai.api_key = os.getenv("OPENAI_KEY")
+    #return os.getenv("OPENAI_KEY")
+    openai.api_key = os.getenv("OPENAI_KEY")
     #print(openai.api_key)
   
 
@@ -77,4 +77,4 @@ def translate_with_ai(text):
     presence_penalty=0)
     completion = response.choices[0].text
 
-    #return completion.strip()
+    return completion.strip()
