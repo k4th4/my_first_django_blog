@@ -16,3 +16,12 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class TextEntry(models.Model):
+    text = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.text
+
+
